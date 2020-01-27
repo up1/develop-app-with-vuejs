@@ -6,12 +6,23 @@
     <p v-if="loginError">{{ loginError }}</p>
     <p v-if="loginSuccessful">Login Successful</p>
     <form @submit.prevent="loginSubmit">
-      <input type="email" placeholder="E-Mail" v-model="email">
+      <input id="email" type="email" placeholder="E-Mail" v-model="email">
       <input type="password" placeholder="Password" v-model="password">
       <button type="submit">Login</button>
     </form>
   </div>
 </template>
+
+<script>
+  export default {
+    name: 'HelloWorld',
+    data () {
+      return {
+        msg: 'Welcome to Your Vue.js App'
+      }
+    }
+  }
+</script>
 
 <style>
   .login {
